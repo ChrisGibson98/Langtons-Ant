@@ -10,6 +10,7 @@ var go;
 var BGColor;
 var multiHue;
 var maxd;
+var sucks;
 
 function setup()
 {
