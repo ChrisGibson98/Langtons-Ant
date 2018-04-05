@@ -14,7 +14,7 @@ var sucks;
 
 function setup()
 {
-	density = 600;
+	density = 300;
 	width = 600;
 	BGColor = 50;
 	go = 1;
