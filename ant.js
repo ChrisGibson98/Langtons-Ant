@@ -1,18 +1,21 @@
 class ant
 {
-  constructor(cell, squareSize, direction)
+  constructor(cell, squareSize, direction, lastCell)
   {
     this.cell = cell;
     this.x = x;
     this.y = y;
     this.squareSize = squareSize;
     this.direction = direction;
+    this.lastCell = lastCell;
   }
   show ()
   {
     // stroke(1);
-    // fill(255, 0, 0, 0);
+    noStroke();
+    fill(255, 0, 0);
     // ellipse((this.cell.x + squareSize/2), (this.cell.y + squareSize/2), this.squareSize/2);
+    rect(this.cell.x, this.cell.y, this.squareSize, this.squareSize);
   }
   move(rate)
   {
@@ -21,7 +24,10 @@ class ant
     {
       for(var i = 0; i < this.rate; i++)
       {
-        if(this.direction == 0)
+        // console.log(this.lastCell);
+        this.lastCell = this.cell;
+        this.lastCell.show();
+                if(this.direction == 0)
         {
           if(this.cell.yID == density - 1)
           {
@@ -64,6 +70,8 @@ class ant
           {
             this.cell = cells[this.cell.yID][this.cell.xID - 1];
           }
+          // this.show();
+
         }
 
         if(this.cell.cellState == 0)
@@ -85,8 +93,6 @@ class ant
         {
           this.direction = 3;
         }
-        // steps++;
-        // console.log(steps);
       }
     }
     go = 1;

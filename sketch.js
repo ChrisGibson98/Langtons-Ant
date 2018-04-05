@@ -21,7 +21,7 @@ function setup()
 	steps = 0;
 	squareSize = width/density;
 	createCanvas(width + 1, width + 1);
-	background(BGColor, BGColor, BGColor);
+	// background(BGColor, BGColor, BGColor);
 	noStroke();
 	maxd = int(dist(0, 0, (density/2)*squareSize, (density/2)*squareSize));
 	multiHue = 360/maxd;
@@ -41,6 +41,6 @@ function setup()
 
 function draw()
 {
-newAnt.move(100);
-	// console.log(multi);
+newAnt.move(20);
+newAnt.show();
 }

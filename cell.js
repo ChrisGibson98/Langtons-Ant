@@ -14,9 +14,9 @@ class cell
 	{
 		if(this.cellState == 1)
 		{
-			colorMode(HSB);
-			fill(this.d*multiHue, 100, 200);
-			// fill(225, 225, 225);
+			// colorMode(HSB);
+			// fill(this.d*multiHue, 100, 200);
+			fill(225, 225, 225);
 		}
 		else if (this.cellState == 0)
 		{
