@@ -11,10 +11,9 @@ class ant
   }
   show ()
   {
-    // stroke(1);
     noStroke();
     fill(255, 0, 0);
-    // ellipse((this.cell.x + squareSize/2), (this.cell.y + squareSize/2), this.squareSize/2);
+    // console.log(this.cell.xID + ", " + this.cell.yID);
     rect(this.cell.x, this.cell.y, this.squareSize, this.squareSize);
   }
   move(rate)
@@ -29,7 +28,7 @@ class ant
         this.lastCell.show();
                 if(this.direction == 0)
         {
-          if(this.cell.yID == density - 1)
+          if(this.cell.yID == hDen - 1)
           {
             this.cell = cells[0][this.cell.xID];
           }
@@ -40,7 +39,7 @@ class ant
         }
         else if(this.direction == 1)
         {
-          if(this.cell.xID == density - 1)
+          if(this.cell.xID == wDen - 1)
           {
             this.cell = cells[this.cell.yID][0];
           }
@@ -53,7 +52,7 @@ class ant
         {
           if(this.cell.yID == 0)
           {
-            this.cell = cells[density - 1][this.cell.xID];
+            this.cell = cells[hDen - 1][this.cell.xID];
           }
           else
           {
@@ -64,7 +63,7 @@ class ant
         {
           if(this.cell.xID == 0)
           {
-            this.cell = cells[this.cell.yID][density - 1];
+            this.cell = cells[this.cell.yID][wDen - 1];
           }
           else
           {

@@ -14,9 +14,10 @@ class cell
 	{
 		if(this.cellState == 1)
 		{
-			// colorMode(HSB);
+			colorMode(HSB);
 			// fill(this.d*multiHue, 100, 200);
-			fill(225, 225, 225);
+			// fill(225, 225, 225);
+			fill(180, 100, 200);
 		}
 		else if (this.cellState == 0)
 		{
@@ -27,7 +28,8 @@ class cell
 		{
 			fill(random(255), random(255), random(255));
 		}
-		noStroke();
+		strokeWeight(sw);
+		stroke(0);
 		rect(this.x, this.y, this.squareSize, this.squareSize);
 	}
 }
