@@ -22,7 +22,7 @@ class cell
 		else if (this.cellState == 0)
 		{
 			colorMode(RGB);
-			fill(BGColor, BGColor, BGColor);
+			fill(BGColor);
 		}
 		else
 		{

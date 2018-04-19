@@ -11,7 +11,6 @@ class ant
   }
   show ()
   {
-    noStroke();
     fill(255, 0, 0);
     // console.log(this.cell.xID + ", " + this.cell.yID);
     rect(this.cell.x, this.cell.y, this.squareSize, this.squareSize);
